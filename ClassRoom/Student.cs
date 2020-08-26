@@ -9,9 +9,9 @@ namespace ClassRoom
     public class Student
     {
 
-        public string Name { get; set; }
-        public int BirthMonth { get; set; }
-        public int Birthday { get; set; }
+        public string Name { get; }
+        public int BirthMonth { get; }
+        public int Birthday { get; }
 
         public Student(string name, int birthMonth, int birthday)
         {
@@ -20,7 +20,9 @@ namespace ClassRoom
             Birthday = birthday;
         }
 
-        
-
+        public override string ToString()
+        {
+            return $"Student name: {Name} birth month: {BirthMonth} day: {Birthday}";
+        }
     }
 }
